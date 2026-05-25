@@ -178,8 +178,6 @@ def serve_all(filename):
     return send_from_directory(BASE_DIR, filename)
 
 if __name__ == '__main__':
-    print("\n" + "="*60)
-    print("  Gelişmiş CORS ve İnteraktif Buton Yönlendirici Aktif!")
-    print("  Adres: http://127.0.0.1:5000")
-    print("="*60 + "\n")
-    app.run(port=5000, debug=True)
+    # Render'ın portunu yakalamak için os kütüphanesini kullanıyoruz
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
