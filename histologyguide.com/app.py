@@ -178,6 +178,6 @@ def serve_all(filename):
     return send_from_directory(BASE_DIR, filename)
 
 if __name__ == '__main__':
-    # Render'ın portunu yakalamak için os kütüphanesini kullanıyoruz
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
+    # Hem Render ortam değişkenlerini (PORT) dinler hem de yerel çakışmaları tamamen önler.
+    port = int(os.environ.get('PORT', 10000))
+    app.run(host='0.0.0.0', port=port, debug=False)
