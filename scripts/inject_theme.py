@@ -3,17 +3,9 @@ import re
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
-# We'll compute a per-file relative path to the project's `custom_theme.css` so
-# HTML files in nested folders get the correct relative href (or use a simple
-# relative path when the file is in the project root).
-
-CSS_TARGET = os.path.join(ROOT, 'custom_theme.css')
-
-def make_href_for(html_dir):
-    rel = os.path.relpath(CSS_TARGET, start=html_dir)
-    # Convert Windows backslashes to forward slashes for href
-    rel = rel.replace('\\', '/')
-    return rel
+# We will reference the CSS via an absolute path so hosting platforms (Render)
+# reliably serve it from `/static/custom_theme.css`.
+ABS_HREF = '/static/custom_theme.css'
 
 httrack_patterns = [
     re.compile(r'<!--[^>]*HTTrack[^>]*-->', re.IGNORECASE|re.DOTALL),
@@ -43,12 +35,10 @@ for dirpath, dirnames, filenames in os.walk(ROOT):
         # Remove any previous injected custom_theme.css links (regardless of path)
         content = re.sub(r'<link[^>]+custom_theme\.css[^>]*>\s*', '', content, flags=re.IGNORECASE)
 
-        # Only inject if there's a </head>
+        # Inject absolute path to static CSS so all pages load the same file.
         match = re.search(r'</head>', content, re.IGNORECASE)
         if match:
-            html_dir = os.path.dirname(path)
-            href = make_href_for(html_dir)
-            inject_line = f'<link rel="stylesheet" href="{href}">'
+            inject_line = f'<link rel="stylesheet" href="{ABS_HREF}">'
             idx = match.start()
             content = content[:idx] + inject_line + '\n' + content[idx:]
 

