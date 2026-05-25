@@ -1,0 +1,64 @@
+:root{
+  --surface: #031713;
+  --surface-dim: #031713;
+  --surface-bright: #283d38;
+  --surface-container-lowest: #00110e;
+  --surface-container-low: #0a1f1b;
+  --surface-container: #0e231f;
+  --surface-container-high: #192e29;
+  --surface-container-highest: #243934;
+  --on-surface: #d0e8e0;
+  --on-surface-variant: #d0c5b5;
+  --outline: #998f81;
+  --surface-tint: #e5c280;
+  --primary: #ffe2af;
+  --on-primary: #402d00;
+  --primary-container: #e8c583;
+  --secondary: #a7cfc2;
+  --on-secondary: #10362e;
+  --tertiary: #dfe5ff;
+  --accent-cream: #FBDDAF;
+  --pure-white: #FFFFFF;
+  --surface-deep: #022B23;
+  --background: #031713;
+  --on-background: #d0e8e0;
+  --radius-sm: 4px;
+  --radius-lg: 12px;
+  --spacing-unit: 8px;
+}
+
+/* Base */
+html,body{height:100%;background:var(--background);color:var(--on-background);font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;margin:0;}
+
+/* Links */
+a{color:var(--primary);text-decoration:underline;}
+a:hover{color:var(--accent-cream);}
+
+/* Navbars and headers */navi, header, nav, .navbar, .site-header{background:linear-gradient(180deg, var(--surface-container) 0%, var(--surface-deep) 100%);color:var(--on-surface);}
+
+/* Buttons */
+.btn{display:inline-block;padding:8px 14px;border-radius:var(--radius-sm);border:none;cursor:pointer;font-weight:600}
+.btn-primary{background:var(--primary);color:var(--on-primary)}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,0.35)}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.08);color:var(--on-surface)}
+
+/* Inputs */
+input,textarea,select{background:var(--surface-deep);color:var(--on-surface);border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:var(--radius-sm)}
+input:focus,textarea:focus,select:focus{outline:none;box-shadow:0 0 0 3px rgba(232,197,131,0.12);border-color:var(--primary-container)}
+
+/* Cards */
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-lg);padding:16px}
+
+/* Chips/Badges */
+.chip{display:inline-block;padding:6px 10px;border-radius:9999px;background:rgba(251,221,175,0.08);color:var(--accent-cream);text-transform:uppercase;letter-spacing:0.08em;font-weight:700}
+
+/* Tables */
+table{width:100%;border-collapse:collapse;color:var(--on-surface)}
+thead th{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));color:var(--pure-white);font-weight:700;padding:8px;border-bottom:1px solid rgba(255,255,255,0.04)}
+tbody tr{border-bottom:1px solid rgba(255,255,255,0.03)}
+
+/* Utility */narrow{max-width:720px;margin-left:auto;margin-right:auto;padding:0 20px}
+
+/* Respect existing site styles: keep selectors reasonably scoped */
+
+@media (max-width:600px){:root{--spacing-unit:6px}body{font-size:15px}}
