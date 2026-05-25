@@ -27,38 +27,45 @@
   --spacing-unit: 8px;
 }
 
+/* High-specificity overrides generated to strongly override legacy site CSS. */
+/* We avoid changing :root variables; below we prefix selectors with `body` and
+   append `!important` to properties so these rules win against existing styles. */
+
 /* Base */
-html,body{height:100%;background:var(--background);color:var(--on-background);font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;margin:0;}
+body, html{
+  height:100% !important;
+}
+body{background:var(--background) !important;color:var(--on-background) !important;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;margin:0 !important}
 
 /* Links */
-a{color:var(--primary);text-decoration:underline;}
-a:hover{color:var(--accent-cream);}
+body a{color:var(--primary) !important;text-decoration:underline !important}
+body a:hover{color:var(--accent-cream) !important}
 
-/* Navbars and headers */navi, header, nav, .navbar, .site-header{background:linear-gradient(180deg, var(--surface-container) 0%, var(--surface-deep) 100%);color:var(--on-surface);}
+/* Navbars and headers */
+body navi, body header, body nav, body .navbar, body .site-header{background:linear-gradient(180deg, var(--surface-container) 0%, var(--surface-deep) 100%) !important;color:var(--on-surface) !important}
 
 /* Buttons */
-.btn{display:inline-block;padding:8px 14px;border-radius:var(--radius-sm);border:none;cursor:pointer;font-weight:600}
-.btn-primary{background:var(--primary);color:var(--on-primary)}
-.btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,0.35)}
-.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.08);color:var(--on-surface)}
+body .btn{display:inline-block !important;padding:8px 14px !important;border-radius:var(--radius-sm) !important;border:none !important;cursor:pointer !important;font-weight:600 !important}
+body .btn-primary{background:var(--primary) !important;color:var(--on-primary) !important}
+body .btn-primary:hover{transform:translateY(-1px) !important;box-shadow:0 8px 24px rgba(0,0,0,0.35) !important}
+body .btn-ghost{background:transparent !important;border:1px solid rgba(255,255,255,0.08) !important;color:var(--on-surface) !important}
 
 /* Inputs */
-input,textarea,select{background:var(--surface-deep);color:var(--on-surface);border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:var(--radius-sm)}
-input:focus,textarea:focus,select:focus{outline:none;box-shadow:0 0 0 3px rgba(232,197,131,0.12);border-color:var(--primary-container)}
+body input, body textarea, body select{background:var(--surface-deep) !important;color:var(--on-surface) !important;border:1px solid rgba(255,255,255,0.06) !important;padding:10px !important;border-radius:var(--radius-sm) !important}
+body input:focus, body textarea:focus, body select:focus{outline:none !important;box-shadow:0 0 0 3px rgba(232,197,131,0.12) !important;border-color:var(--primary-container) !important}
 
 /* Cards */
-.card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-lg);padding:16px}
+body .card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02)) !important;border:1px solid rgba(255,255,255,0.06) !important;border-radius:var(--radius-lg) !important;padding:16px !important}
 
 /* Chips/Badges */
-.chip{display:inline-block;padding:6px 10px;border-radius:9999px;background:rgba(251,221,175,0.08);color:var(--accent-cream);text-transform:uppercase;letter-spacing:0.08em;font-weight:700}
+body .chip{display:inline-block !important;padding:6px 10px !important;border-radius:9999px !important;background:rgba(251,221,175,0.08) !important;color:var(--accent-cream) !important;text-transform:uppercase !important;letter-spacing:0.08em !important;font-weight:700 !important}
 
 /* Tables */
-table{width:100%;border-collapse:collapse;color:var(--on-surface)}
-thead th{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));color:var(--pure-white);font-weight:700;padding:8px;border-bottom:1px solid rgba(255,255,255,0.04)}
-tbody tr{border-bottom:1px solid rgba(255,255,255,0.03)}
+body table{width:100% !important;border-collapse:collapse !important;color:var(--on-surface) !important}
+body thead th{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)) !important;color:var(--pure-white) !important;font-weight:700 !important;padding:8px !important;border-bottom:1px solid rgba(255,255,255,0.04) !important}
+body tbody tr{border-bottom:1px solid rgba(255,255,255,0.03) !important}
 
-/* Utility */narrow{max-width:720px;margin-left:auto;margin-right:auto;padding:0 20px}
+/* Utility */
+body narrow{max-width:720px !important;margin-left:auto !important;margin-right:auto !important;padding:0 20px !important}
 
-/* Respect existing site styles: keep selectors reasonably scoped */
-
-@media (max-width:600px){:root{--spacing-unit:6px}body{font-size:15px}}
+@media (max-width:600px){:root{--spacing-unit:6px}body{font-size:15px !important}}
