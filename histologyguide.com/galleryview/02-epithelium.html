@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!--
+Virtual Slide Viewer developed from the Zoomify HTML5 Viewer
+Version 8.0
+Copyright (c) 2005-2026. T. Clark Brelje and Robert L. Sorenson. All rights reserved.
+-->
+
+
+<!-- Mirrored from histologyguide.com/galleryview/02-epithelium.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 May 2026 13:43:33 GMT -->
+<head>
+    <script async src="../../www.googletagmanager.com/gtag/js0aa4?id=G-GMM6B02G5T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GMM6B02G5T');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Epithelium | Histology Guide</title>
+    <meta name="description" content="Histology...">
+    <link rel="canonical" href="../gallery/02-epithelium.html">
+    <link rel="icon" href="https://histologyguide.com/assets/imgs/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://histologyguide.com/assets/imgs/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://histologyguide.com/assets/imgs/favicon-180x180.png">
+    <link rel="stylesheet" href="https://histologyguide.com/assets/css/icomoon.css">
+    <link rel="stylesheet" href="https://histologyguide.com/assets/css/TCB-Library.css?v=8.5">
+    <link rel="stylesheet" href="https://histologyguide.com/assets/css/SlideView.css?v=8.5">
+    <link rel="preconnect" href="../../fonts.googleapis.com/index.html">
+    <link rel="preconnect" href="../../fonts.gstatic.com/index.html" crossorigin>
+    <link href="../../fonts.googleapis.com/css2d3f4.css?family=Roboto+Flex:opsz,wght@8..144,100..1000&amp;display=swap" rel="stylesheet">
+    <script src="https://histologyguide.com/assets/js/TCB-library.js?v=8.5"></script>
+    <script src="https://histologyguide.com/assets/js/SlideView.js?v=8.5"></script>
+    <script src="https://histologyguide.com/assets/js/TCB-ZoomifyImageViewerEnterprise.js"></script>
+    <link rel="stylesheet" href="https://histologyguide.com/assets/css/Zm-Viewer.css?v=8.5">
+    <script src="https://histologyguide.com/assets/js/Zm-Viewer.js?v=8.5"></script>
+    <link rel="stylesheet" href="https://histologyguide.com/assets/css/light-border.css">
+    <script src="https://histologyguide.com/assets/js/popper.min.js"></script>
+    <script src="https://histologyguide.com/assets/js/tippy-bundle.umd.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Different slides are shown for each page in the sidebar
+            var filenames = [
+                '/slides/MH-016-simple-epithelia.zif',
+                '/slides/MHS-261-common-bile-duct.zif',
+                '/slides/MHS-227a-eye.zif',
+                '/slides/MHS-224-ovary-and-oviduct.zif',
+                '/slides/MHS-281-pavement-epithelium.zif',
+                '/slides/MH-016-simple-epithelia.zif',
+                '/slides/MHS-211-pancreas.zif',
+                '/slides/MHS-224-ovary-and-oviduct.zif',
+                '/slides/MH-016-simple-epithelia.zif',
+                '/slides/MH-119-ileum.zif',
+                '/slides/MH-120-ileum.zif',
+                '/slides/MHS-219-jejunum.zif',
+                '/slides/MHS-261-common-bile-duct.zif',
+                '/slides/MHS-224-ovary-and-oviduct.zif',
+                '/slides/MH-016-simple-epithelia.zif',
+                '/slides/MH-135-larynx.zif',
+                '/slides/MH-136-trachea.zif',
+                '/slides/MHS-222-trachea.zif',
+                '/slides/MH-017-stratified-epithelia.zif',
+                '/slides/MH-109-esophagus.zif',
+                '/slides/MH-038-epiglottis.zif',
+                '/slides/MH-090-thin-skin.zif',
+                '/slides/MH-091-thick-skin.zif',
+                '/slides/MHS-235-thick-skin.zif',
+                '/slides/MHS-227a-eye.zif',
+                '/slides/MH-109-esophagus.zif',
+                '/slides/MHS-234-esophagus.zif',
+                '/slides/MH-018-transitional-epithelia.zif',
+                '/slides/MHS-214-bladder.zif',
+            ];
+            var annotations = [
+                '/slideview/MH-016-simple-epithelia/02-slide-1',
+                '/slideview/MHS-261-common-bile-duct/02-slide-1',
+                '/slideview/MHS-227a-eye/02-slide-1',
+                '/slideview/MHS-224-ovary-and-oviduct/02-slide-1',
+                '/slideview/MHS-281-pavement-epithelium/02-slide-1',
+                '/slideview/MH-016-simple-epithelia/02-slide-2',
+                '/slideview/MHS-211-pancreas/02-slide-1',
+                '/slideview/MHS-224-ovary-and-oviduct/02-slide-2',
+                '/slideview/MH-016-simple-epithelia/02-slide-3',
+                '/slideview/MH-119-ileum/02-slide-1',
+                '/slideview/MH-120-ileum/02-slide-1',
+                '/slideview/MHS-219-jejunum/02-slide-1',
+                '/slideview/MHS-261-common-bile-duct/02-slide-2',
+                '/slideview/MHS-224-ovary-and-oviduct/02-slide-3',
+                '/slideview/MH-016-simple-epithelia/02-slide-4',
+                '/slideview/MH-135-larynx/02-slide-1',
+                '/slideview/MH-136-trachea/02-slide-1',
+                '/slideview/MHS-222-trachea/02-slide-1',
+                '/slideview/MH-017-stratified-epithelia/02-slide-1',
+                '/slideview/MH-109-esophagus/02-slide-1',
+                '/slideview/MH-038-epiglottis/02-slide-1',
+                '/slideview/MH-090-thin-skin/02-slide-1',
+                '/slideview/MH-091-thick-skin/02-slide-1',
+                '/slideview/MHS-235-thick-skin/02-slide-1',
+                '/slideview/MHS-227a-eye/02-slide-2',
+                '/slideview/MH-109-esophagus/02-slide-2',
+                '/slideview/MHS-234-esophagus/02-slide-1',
+                '/slideview/MH-018-transitional-epithelia/02-slide-1',
+                '/slideview/MHS-214-bladder/02-slide-1',
+            ];
+            var pixelsizes = [
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+                0.3171,
+            ];
+            zInitSwapImages(filenames, annotations, pixelsizes);
+            var num = zSwapRangeCheck(zURL.getParam('page')) - 1;
+            // Change to folder name that contains annotations.xml
+            var options = 'zAnnotationPath=' + annotations[num];
+            zShowImage('zoomify-gallery-viewer', filenames[num], options, false, {
+                magnification: 40,
+                objectives: [ 4, 10, 20, 40 ],
+                pixelsize: pixelsizes[num],
+                units: '&micro;m',
+                annotationPath: annotations[num]
+            });
+            // Show the first page or the one parsed from the URL
+            svSetupGallery();
+            svGalleryTooltips();
+            svSetGalleryImage(num, false);
+        });
+    </script>
+</head>
+<body>
+    <a href="#gallery" class="skip-link">Skip To Main Content (Press Enter).</a>
+    <header>
+        <nav aria-label="Main application menu">
+        <div class="left">
+            <button id="appMenuBtn" class="icon-th-small tooltip" title="App Menu" aria-haspopup="true" aria-expanded="false" aria-controls="main-app-menu">
+                <span class="sr-only">Open application navigation menu</span>
+            </button>
+            <a id="chapterBtn" class="tooltip" title="Return to Gallery Chapters" aria-current="location" href="../gallery/gallery.html">RETURN TO GALLERY</a>
+        </div>
+        <h1 class="gallery-title">Epithelium</h1>
+        <div class="right">
+            <button id="settingsBtn" class="icon-settings tooltip" title="Settings for Virtual Microscope">
+                <span class="sr-only">Settings for virtual microscope</span>
+            </button>
+            <button id="contactBtn" class="icon-users tooltip rightHidden" title="Contact Us">
+                <span class="sr-only">Contact us</span>
+            </button>
+            <button id="helpBtn" class="icon-question-mark tooltip rightHidden" title="Help using Virtual Microscope">
+                <span class="sr-only">Help using virtual microscope</span>
+            </button>
+            <button id="shareBtn" class="tooltip rightHidden" title="Share this view" aria-label="Share this view">SHARE</button>
+        </div>
+        </nav>
+    <div id="main-app-menu" class="appMenu" role="dialog" aria-label="Application navigation menu" aria-modal="true">
+        <img src="https://histologyguide.com/assets/imgs/appmenu.png" width="350" height="80" class="thumbnail" alt="application menu">
+        <ul role="menu">
+            <li role="none"><a href="../index.html" role="menuitem"><span class="appMenuIcon icon-home3"></span>HOME</a></li>
+            <li role="none"><a href="../gallery/gallery.html" role="menuitem"><span class="appMenuIcon icon-drawer"></span>GALLERY</a></li>
+            <li role="none"><a href="../index/index-A.html" role="menuitem"><span class="appMenuIcon icon-stack"></span>INDEX</a></li>
+            <li role="none"><a href="../search.html" role="menuitem"><span class="appMenuIcon icon-magnifier"></span>SEARCH</a></li>
+            <li role="none"><button onclick="svShowPanel('contactPanel')" role="menuitem"><span class="appMenuIcon icon-users"></span>CONTACT US</button></li>
+            <li role="none"><a href="../about-us/license.html" role="menuitem"><span class="appMenuIcon icon-checkmark8"></span>TERMS OF USE</a></li>
+            <li role="none"><button onclick="svShowPanel('settingsPanel')" role="menuitem"><span class="appMenuIcon icon-settings"></span>SETTINGS</button></li>
+            <li role="none"><button onclick="svShowPanel('sharePanel')" role="menuitem"><span class="appMenuIcon icon-share-alt"></span>SHARE</button></li>
+            <li role="none"><a href="../help.html" role="menuitem"><span class="appMenuIcon icon-question6"></span>HELP</a></li>
+        </ul>
+    </div>
+    <div id="settingsPanel" class="tcb-rightPanel" role="dialog" aria-labelledby="settingsPanel-title" aria-modal="true" hidden>
+        <h2 id="settingsPanel-title"><span class="tcb-rightPanelIcon icon-settings"></span>SETTINGS</h2>
+        <p>Version 8.3</p>
+        <div><button id="defaultsBtn">Restore Defaults</button></div>
+        <br>
+        <label><input type="checkbox" id="fullScreen"> Allows Open Full Screen</label>
+        <h3>Display mode</h3>
+        <label><input type="radio" name="colorTheme" id="darkTheme"> Normal</label>
+        <label><input type="radio" name="colorTheme" id="lightTheme"> High Contrast</label>
+        <h3>Viewer options</h3>
+        <label><input type="checkbox" id="navigator"> Navigator thumbnail</label>
+        <label><input type="checkbox" id="toolbar"> Toolbar</label>
+        <label class="left30"><input type="checkbox" id="zmMagnification"> Magnification buttons (left side)</label>
+        <label class="left30"><input type="checkbox" id="zmViewSize"> View size (right side)</label>
+        <label><input type="checkbox" id="zmPointer"> Virtual Pointer</label>
+        <label class="left30"><input type="radio" name="pointersize" id="pointerSmaller"> Smaller</label>
+        <label class="left30"><input type="radio" name="pointersize" id="pointerNormal"> Default</label>
+        <label class="left30"><input type="radio" name="pointersize" id="pointerLarger"> Larger</label>
+        <label for="pointerColor" class="selectlabel">Color</label>
+        <select id="pointerColor" class="left30"></select>
+        <label><input type="checkbox" id="coordinates" class="left30"> Pointer Coordinates</label>
+        <label><input type="checkbox" id="waypoints"> WayPoints</label>
+        <label class="left30"><input type="radio" name="tagsize" id="tagSmaller"> Smaller</label>
+        <label class="left30"><input type="radio" name="tagsize" id="tagNormal"> Default</label>
+        <label class="left30"><input type="radio" name="tagsize" id="tagLarger"> Larger</label>
+        <label for="tagColor" class="selectlabel">Default color</label>
+        <select id="tagColor" class="left30"></select>
+        <br>
+        <p class="pg-left30">Move Between WayPoints:</p>
+        <label class="left30"><input type="checkbox" id="tagKeys"> Next (N key) / previous (P key) shortcuts</label>
+        <label class="left30"><input type="checkbox" id="tagEdgeButtons"> Previous / next buttons (left / right edges)</label>
+        <label><input type="checkbox" id="scalebar"> Scalebar</label>
+        <label for="scalebarColor" class="selectlabel">Text &amp; line color</label>
+        <select id="scalebarColor" class="left30"></select>
+        <br>
+        <label for="scalebarBkgndColor" class="selectlabel">Background color</label>
+        <select id="scalebarBkgndColor" class="left30"></select>
+        <br>
+        <label><input type="checkbox" id="viewmanager"> List of saved views</label>
+        <h3>Description</h3>
+        <div class="pagemode">
+            <label><input type="radio" name="pagemode" id="multiPage"> View as Multiple Pages (default)</label>
+            <label><input type="radio" name="pagemode" id="onePage"> View as Single Page</label>
+        </div>
+        <h3>Font size</h3>
+        <div class="fontsize">
+            <label><input type="radio" name="fontsize" id="fontSmaller"> Smaller</label>
+            <label><input type="radio" name="fontsize" id="fontNormal"> Default</label>
+            <label><input type="radio" name="fontsize" id="fontLarger"> Larger</label>
+        </div>
+    </div>
+    <div id="contactPanel" class="tcb-rightPanel" role="dialog" aria-labelledby="contactPanel-title" aria-modal="true" hidden>
+        <h2 id="contactPanel-title"><span class="tcb-rightPanelIcon icon-users"></span>CONTACT US</h2>
+        <p>Questions or comments should be sent to
+            <br><strong><a href="mailto:tcbrelje@gmail.com">tcbrelje@gmail.com</a></strong></p>
+        <p>This web site is owned and operated by:</p>
+        <h3>T. Clark Brelje, Ph.D.</h3>
+        <p>Faculty/Retired
+            <br>University of Minnesota
+            <br> Department of Genetics, Cell Biology and Development
+            <br> 6-160 Jackson Hall
+            <br> 321 Church St SE
+            <br> Minneapolis, MN 55455</p>
+        <h3>Robert L. Sorenson, Ph.D.</h3>
+        <p>Professor Emeritus
+            <br>University of Minnesota
+            <br> Department of Genetics, Cell Biology and Development
+            <br> 6-160 Jackson Hall
+            <br> 321 Church St SE
+            <br> Minneapolis, MN 55455</p>
+        <p>See <a href="../about-us/license.html">Terms of Use</a> for more information.</p>
+    </div>
+    <div id="helpPanel" class="tcb-rightPanel" role="dialog" aria-labelledby="helpPanel-title" aria-modal="true" hidden>
+        <h2 id="helpPanel-title"><span class="tcb-rightPanelIcon icon-question-mark"></span>HELP</h2>
+        <p>See <strong><a href="../help.html">HELP</a></strong> for more extensive information.</p>
+        <p>Download the <a href="../Histology-Guide-User-Guide-1.1.pdf" download rel="noopener noreferrer" aria-label="Download the Histology User Guide as a PDF">User Guide v1.1</a> (PDF) to learn about new platform features.</p>
+        <p>Each slide is shown with additional information to its right. The image can be changed using any combination of the following commands.</p>
+        <h3>Sidebar</h3>
+        <ul>
+            <li><strong>Links</strong>: Click to navigate to a specific region</li>
+            <li><strong>Images</strong>: Click to show this view</li>
+            <li><strong>Toolbar</strong>: Use controls to adjust magnification and pan the image</li>
+        </ul>
+        <h3>Mouse</h3>
+        <ul>
+            <li><strong>Zoom In</strong>: Click left button</li>
+            <li><strong>Zoom Out</strong>: Double-click left button</li>
+            <li><strong>Pan/Move</strong>: Click and drag the image</li>
+        </ul>
+        <h3>Keyboard</h3>
+        <ul>
+            <li><strong>Zoom In</strong>: &#8216;A&#8217; key</li>
+            <li><strong>Zoom Out</strong>: &#8216;Z&#8217; key</li>
+            <li><strong>Pan/Move</strong>: Arrow keys (Up, Down, Left, Right)</li>
+            <li><strong>Reset View</strong>: ESC key (fit-to-screen view)</li>
+        </ul>
+        <h3>Touch</h3>
+        <ul>
+            <li><strong>Tap</strong>: Zoom in on a specific area</li>
+            <li><strong>Double-tap</strong>: Zoom out from the current view</li>
+            <li><strong>Drag</strong>: Pan the image</li>
+        </ul>
+    </div>
+    <div id="sharePanel" class="tcb-rightPanel" role="dialog" aria-labelledby="sharePanel-title" aria-modal="true" hidden>
+        <h2 id="sharePanel-title"><span class="tcb-rightPanelIcon icon-share-alt"></span>SHARE</h2>
+        <div id="share-buttons"></div>
+        <p>A link to a virtual slide can be saved for later viewing in different ways.</p>
+        <h3>Clipboard</h3>
+        <p>The address of this view has been copied to your clipboard. This link can be pasted in any other program.</p>
+        <h3>Bookmark</h3>
+        <p>A bookmark link can be created using the bookmark function (<strong>Ctrl-D</strong> for Windows or <strong>Cmd-D</strong> for Mac) of your browser. Choose a name for the bookmark and select the folder in which you want it saved.</p>
+    </div>
+    </header>
+    <main aria-label="List of virtual slides in chapter 2 - epithelium">
+    <div id="zoomify-gallery-viewer" role="application" aria-label="Virtual microscope slide viewer" tabindex="0"></div>
+    <div id="gallery">
+        <h2>Simple Squamous Epithelium</h2>
+        <input id="slide-0" type="image" class="thumbnail" src="../slideview/MH-016-simple-epithelia/imgs/slide.png"
+            title="Simple Squamous Epithelium<br>Renal Corpuscle (Kidney)<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(0, true);">
+        <p id="title-0">MH 016 Simple Epithelia</p>
+        <input id="slide-1" type="image" class="thumbnail" src="../slideview/MHS-261-common-bile-duct/imgs/slide.png"
+            title="Simple Squamous Epithelium<br>Blood Vessels (Bile Duct)<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(1, true);">
+        <p id="title-1">MHS 261 Common Bile Duct</p>
+        <input id="slide-2" type="image" class="thumbnail" src="../slideview/MHS-227a-eye/imgs/slide.png"
+            title="Simple Squamous Epithelium<br>Cornea (Posterior Surface)<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(2, true);">
+        <p id="title-2">MHS 227a Eye</p>
+        <input id="slide-3" type="image" class="thumbnail" src="../slideview/MHS-224-ovary-and-oviduct/imgs/slide.png"
+            title="Simple Squamous Epithelium<br>Mesothelium (Mesentery)<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(3, true);">
+        <p id="title-3">MHS 224 Ovary and Oviduct</p>
+        <input id="slide-4" type="image" class="thumbnail" src="../slideview/MHS-281-pavement-epithelium/imgs/slide.png"
+            title="Simple Squamous Epithelium<br>Mesothelium (Mesentery)<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(4, true);">
+        <p id="title-4">MHS 281 Pavement Epithelium</p>
+        <h2>Simple Cuboidal Epithelium</h2>
+        <input id="slide-5" type="image" class="thumbnail" src="../slideview/MH-016-simple-epithelia/imgs/slide.png"
+            title="Simple Cuboidal Epithelium<br>Ovary and Kidney<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(5, true);">
+        <p id="title-5">MH 016 Simple Epithelia</p>
+        <input id="slide-6" type="image" class="thumbnail" src="../slideview/MHS-211-pancreas/imgs/slide.png"
+            title="Simple Cuboidal Epithelium<br>Pancreatic Ducts<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(6, true);">
+        <p id="title-6">MHS 211 Pancreas</p>
+        <input id="slide-7" type="image" class="thumbnail" src="../slideview/MHS-224-ovary-and-oviduct/imgs/slide.png"
+            title="Simple Cuboidal Epithelium<br>Ovary<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(7, true);">
+        <p id="title-7">MHS 224 Ovary and Oviduct</p>
+        <h2>Simple Columnar Epithelium</h2>
+        <input id="slide-8" type="image" class="thumbnail" src="../slideview/MH-016-simple-epithelia/imgs/slide.png"
+            width="120" title="Simple Columnar Epithelium<br>with Goblet Cells<br>Small Intestine<br>H&amp;E" height="60" alt="slide"
+            onclick="svSetGalleryImage(8, true);">
+        <p id="title-8">MH 016 Simple Epithelia</p>
+        <input id="slide-9" type="image" class="thumbnail" src="../slideview/MH-119-ileum/imgs/slide.png"
+            width="120" title="Simple Columnar Epithelium<br>with Goblet Cells<br>Small Intestine (Ileum)<br>H&amp;E" height="60" alt="slide"
+            onclick="svSetGalleryImage(9, true);">
+        <p id="title-9">MH 119 Ileum</p>
+        <input id="slide-10" type="image" class="thumbnail" src="../slideview/MH-120-ileum/imgs/slide.png"
+            width="120" title="Simple Columnar Epithelium<br>with Goblet Cells<br>Small Intestine (Ileum)<br>H&amp;E" height="60" alt="slide"
+            onclick="svSetGalleryImage(10, true);">
+        <p id="title-10">MH 120 Ileum</p>
+        <input id="slide-11" type="image" class="thumbnail" src="../slideview/MHS-219-jejunum/imgs/slide.png"
+            width="120" title="Simple Columnar Epithelium<br>with Goblet Cells<br>Small Intestine (Jejunum)<br>H&amp;E" height="60" alt="slide"
+            onclick="svSetGalleryImage(11, true);">
+        <p id="title-11">MHS 219 Jejunum</p>
+        <input id="slide-12" type="image" class="thumbnail" src="../slideview/MHS-261-common-bile-duct/imgs/slide.png"
+            title="Simple Columnar Epithelium<br>Bile Duct<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(12, true);">
+        <p id="title-12">MHS 261 Common Bile Duct</p>
+        <input id="slide-13" type="image" class="thumbnail" src="../slideview/MHS-224-ovary-and-oviduct/imgs/slide.png"
+            title="Simple Columnar Epithelium<br>Oviduct<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(13, true);">
+        <p id="title-13">MHS 224 Ovary and Oviduct</p>
+        <h2>Pseudostratified Columnar Epithelium</h2>
+        <input id="slide-14" type="image" class="thumbnail" src="../slideview/MH-016-simple-epithelia/imgs/slide.png"
+            title="Pseudostratified Columnar Epithelium<br>Trachea<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(14, true);">
+        <p id="title-14 ">MH 016 Simple Epithelia</p>
+        <input id="slide-15" type="image" class="thumbnail" src="../slideview/MH-135-larynx/imgs/slide.png"
+            title="Pseudostratified Columnar Epithelium<br>Larynx<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(15, true);">
+        <p id="title-15">MH 135 Larynx</p>
+        <input id="slide-16" type="image" class="thumbnail" src="../slideview/MH-136-trachea/imgs/slide.png"
+            title="Pseudostratified Columnar Epithelium<br>Trachea<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(16, true);">
+        <p id="title-16">MH 136 Trachea</p>
+        <input id="slide-17" type="image" class="thumbnail" src="../slideview/MHS-222-trachea/imgs/slide.png"
+            title="Pseudostratified Columnar Epithelium<br>Trachea<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(17, true);">
+        <p id="title-17">MHS 222 Trachea</p>
+        <h2>Stratified Squamous Epithelium</h2>
+        <input id="slide-18" type="image" class="thumbnail" src="../slideview/MH-017-stratified-epithelia/imgs/slide.png"
+            title="Stratified Squamous Epithelium<br>Thin Skin and Esophagus<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(18, true);">
+        <p id="title-18">MH 017 Stratified Epithelia</p>
+        <input id="slide-19" type="image" class="thumbnail" src="../slideview/MH-109-esophagus/imgs/slide.png"
+            title="Stratified Squamous Epithelium<br>(Non-Keratinized)<br>Esophagus<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(19, true);">
+        <p id="title-19">MH 109 Esophagus</p>
+        <input id="slide-20" type="image" class="thumbnail" src="../slideview/MH-038-epiglottis/imgs/slide.png"
+            title="Stratified Squamous Epithelium<br>(Non-Keratinized)<br>Epiglottis<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(20, true);">
+        <p id="title-20">MH 038 Epiglottis</p>
+        <input id="slide-21" type="image" class="thumbnail" src="../slideview/MH-090-thin-skin/imgs/slide.png"
+            title="Stratified Squamous Epithelium<br>(Keratinized)<br>Thin Skin<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(21, true);">
+        <p id="title-21">MH 090 Thin Skin</p>
+        <input id="slide-22" type="image" class="thumbnail" src="../slideview/MH-091-thick-skin/imgs/slide.png"
+            title="Stratified Squamous Epithelium<br>(Keratinized)<br>Thick Skin<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(22, true);">
+        <p id="title-22">MH 091 Thick Skin</p>
+        <input id="slide-23" type="image" class="thumbnail" src="../slideview/MHS-235-thick-skin/imgs/slide.png"
+            title="Stratified Squamous Epithelium<br>(Keratinized)<br>Thick Skin<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(23, true);">
+        <p id="title-23">MHS 235 Thick Skin</p>
+        <input id="slide-24" type="image" class="thumbnail" src="../slideview/MHS-227a-eye/imgs/slide.png"
+            title="Stratified Squamous Epithelium<br>(Non-Keratinized)<br>Cornea (Anterior Surface)<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(24, true);">
+        <p id="title-24">MHS 227a Eye</p>
+        <h2>Stratified Cuboidal Epithelium</h2>
+        <input id="slide-25" type="image" class="thumbnail" src="../slideview/MH-109-esophagus/imgs/slide.png"
+            title="Stratified Cuboidal Epithelium<br>Esophagus<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(25, true);">
+        <p id="title-25">MH 109 Esophagus</p>
+        <input id="slide-26" type="image" class="thumbnail" src="../slideview/MHS-234-esophagus/imgs/slide.png"
+            title="Stratified Cuboidal Epithelium<br>Esophagus<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(26, true);">
+        <p id="title-26">MHS 234 Esophagus</p>
+        <h2>Transitional Epithelium</h2>
+        <input id="slide-27" type="image" class="thumbnail" src="../slideview/MH-018-transitional-epithelia/imgs/slide.png"
+            title="Transitional Epithelium<br>Bladder<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(27, true);">
+        <p id="title-27">MH 018 Transitional Epithelia</p>
+        <input id="slide-28" type="image" class="thumbnail" src="../slideview/MHS-214-bladder/imgs/slide.png"
+            title="Transitional Epithelium<br>Bladder<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(28, true);">
+        <p id="title-28">MHS 214 Bladder</p>
+    </div>
+    </main>
+</body>
+
+<!-- Mirrored from histologyguide.com/galleryview/02-epithelium.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 May 2026 13:43:34 GMT -->
+</html> 

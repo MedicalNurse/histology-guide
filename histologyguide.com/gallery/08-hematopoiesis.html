@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!--
+Virtual Slide Viewer developed from the Zoomify HTML5 Viewer
+Version 7.0
+Copyright (c) 2005-2025. T. Clark Brelje and Robert L. Sorenson. All rights reserved.
+-->
+
+
+<!-- Mirrored from histologyguide.com/gallery/08-hematopoiesis.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 May 2026 15:38:50 GMT -->
+<head>
+    <script async src="../../www.googletagmanager.com/gtag/js0aa4?id=G-GMM6B02G5T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GMM6B02G5T');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Hematopoiesis | Histology Guide</title>
+    <meta name="description" content="Histology...">
+    <link rel="canonical" href="08-hematopoiesis.html">
+    <link rel="icon" href="https://histologyguide.com/assets/imgs/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://histologyguide.com/assets/imgs/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://histologyguide.com/assets/imgs/favicon-180x180.png">
+    <link rel="stylesheet" href="https://histologyguide.com/assets/css/icomoon.css">
+    <link rel="stylesheet" href="https://histologyguide.com/assets/css/TCB-Library.css">
+    <link rel="stylesheet" href="https://histologyguide.com/assets/css/SlideView.css">
+    <script src="https://histologyguide.com/assets/js/TCB-library.js"></script>
+    <script src="https://histologyguide.com/assets/js/SlideView.js"></script>
+    <script src="https://histologyguide.com/assets/js/TCB-ZoomifyImageViewerEnterprise.js"></script>
+    <link rel="stylesheet" href="https://histologyguide.com/assets/css/Zm-Viewer.css">
+    <script src="https://histologyguide.com/assets/js/Zm-Viewer.js"></script>
+    <link rel="stylesheet" href="https://histologyguide.com/assets/css/scale.css">
+    <link rel="stylesheet" href="https://histologyguide.com/assets/css/light-border.css">
+    <script src="https://histologyguide.com/assets/js/popper.min.js"></script>
+    <script src="https://histologyguide.com/assets/js/tippy-bundle.umd.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Different slides are shown for each page in the sidebar
+            var filenames = [
+                '/slides/MHS-304-bone-marrow.zif',
+                '/slides/MH-034a-bone-marrow-smear.zif',
+                '/slides/MH-034bhr-bone-marrow-smear.zif',
+                '/slides/MH-034bhr-bone-marrow-smear.zif',
+                '/slides/MH-034bhr-bone-marrow-smear.zif',
+                '/slides/MH-034bhr-bone-marrow-smear.zif',
+                '/slides/MH-034bhr-bone-marrow-smear.zif',
+                '/slides/MH-034bhr-bone-marrow-smear.zif',
+                '/slides/MH-034a-bone-marrow-smear.zif',
+                '/slides/MH-034bhr-bone-marrow-smear.zif',
+                '/slides/MH-034bhr-summary.zif',
+                '/slides/MH-034bhr-bone-marrow-smear.zif',
+                '/slides/MH-034f-bone-marrow-smear.zif',
+                '/slides/MH-034ahr-bone-marrow-smear.zif',
+                '/slides/MH-034chr-bone-marrow-smear.zif',
+                '/slides/MH-034dhr-bone-marrow-smear.zif',
+                '/slides/MH-034ehr-bone-marrow-smear.zif',
+                '/slides/MH-034fhr-bone-marrow-smear.zif',
+            ];
+            var annotations = [
+                '/slideview/MHS-304-bone-marrow/08-slide-1',
+                '/slideview/MH-034a-bone-marrow-smear/08-slide-1',
+                '/slideview/MH-034bhr-bone-marrow-smear/08-slide-1',
+                '/slideview/MH-034bhr-bone-marrow-smear/08-slide-2',
+                '/slideview/MH-034bhr-bone-marrow-smear/08-slide-3',
+                '/slideview/MH-034bhr-bone-marrow-smear/08-slide-4',
+                '/slideview/MH-034bhr-bone-marrow-smear/08-slide-5',
+                '/slideview/MH-034bhr-bone-marrow-smear/08-slide-7',
+                '/slideview/MH-034a-034bhr-bone-marrow-smear/08-page-1',
+                '/slideview/MH-034a-034bhr-bone-marrow-smear/08-page-2',
+                '/slideview/MH-034bhr-summary/08-slide-1',
+                '/slideview/MH-034bhr-bone-marrow-smear/08-slide-6',
+                '/slideview/MH-034f-bone-marrow-smear/08-slide-1',
+                '/slideview/MH-034ahr-bone-marrow-smear/08-slide-1',
+                '/slideview/MH-034chr-bone-marrow-smear/08-slide-1',
+                '/slideview/MH-034dhr-bone-marrow-smear/08-slide-1',
+                '/slideview/MH-034ehr-bone-marrow-smear/08-slide-1',
+                '/slideview/MH-034fhr-bone-marrow-smear/08-slide-1',
+            ];
+            var pixelsizes = [
+                0.2508,
+                0.2555,
+                0.0976,
+                0.0976,
+                0.0976,
+                0.0976,
+                0.0976,
+                0.0976,
+                0.2555,
+                0.0976,
+                0.0683,
+                0.0976,
+                0.3171,
+                0.0976,
+                0.0976,
+                0.0976,
+                0.0976,
+                0.0976,
+            ];
+            zInitSwapImages(filenames, annotations, pixelsizes);
+            var num = zSwapRangeCheck(zURL.getParam('page')) - 1;
+            // Change to folder name that contains annotations.xml
+            var options = 'zAnnotationPath=' + annotations[num];
+            zShowImage('zoomify-gallery-viewer', filenames[num], options, false, {
+                magnification: 60,
+                objectives: [ 4, 10, 20, 40, 60 ],
+                pixelsize: 0.4666,
+                units: '&micro;m',
+                annotationPath: annotations[num]
+            });
+            // Show the first page or the one parsed from the URL
+            svGalleryTooltips();
+            svSetGalleryImage(num, false);
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="left">
+            <button id="appMenuBtn" class="icon-th-small tooltip" title="App Menu"></button>
+            <a id="chapterBtn" class="tooltip" title="Return to this Chapter" href="gallery.html">RETURN TO GALLERY</a>
+        </div>
+        <div class="center">Hematopoiesis</div>
+        <div class="right">
+            <button id="settingsBtn" class="icon-settings tooltip" title="Settings for Virtual Microscope"></button>
+            <button id="contactBtn" class="icon-users tooltip" title="Contact Us"></button>
+            <button id="helpBtn" class="icon-question-mark tooltip rightHidden" title="Help using Virtual Microscope"></button>
+            <button id="shareBtn" class="tooltip rightHidden" title="Share View with Others">SHARE</button>
+        </div>
+    </header>
+    <div class="appMenu">
+        <img src="https://histologyguide.com/assets/imgs/appmenu.png" width="350" height="80" class="thumbnail" alt="application menu">
+        <ul>
+            <li><a href="../index.html"><span class="appMenuIcon icon-home3"></span>HOME</a></li>
+            <li><a href="gallery.html"><span class="appMenuIcon icon-drawer"></span>GALLERY</a></li>
+            <li><a href="../index/index-A.html"><span class="appMenuIcon icon-stack"></span>INDEX</a></li>
+            <li><a href="../search.html"><span class="appMenuIcon icon-magnifier"></span>SEARCH</a></li>
+            <li><button onclick="svShowPanel('contactPanel')"><span class="appMenuIcon icon-users"></span>CONTACT US</button></li>
+            <li><a href="../about-us/license.html"><span class="appMenuIcon icon-checkmark8"></span>TERMS OF USE</a></li>
+            <li><button onclick="svShowPanel('settingsPanel')"><span class="appMenuIcon icon-settings"></span>SETTINGS</button></li>
+            <li><button onclick="svShowPanel('sharePanel')"><span class="appMenuIcon icon-share-alt"></span>SHARE</button></li>
+            <li><a href="../help.html"><span class="appMenuIcon icon-question-mark"></span>HELP</a></li>
+        </ul>
+    </div>
+    <div id="settingsPanel" class="tcb-rightPanel" hidden>
+        <div class="tcb-rightPanelClose">
+            <button><span class="icon icon-cross2"></span>Close</button>
+        </div>
+        <h2><span class="tcb-rightPanelIcon icon-settings"></span>SETTINGS</h2>
+        <p>Version 7.0</p>
+        <div class="defaultsBtn"><button id="defaultsBtn">Restore Defaults</button></div>
+        <br>
+        <label><input type="checkbox" id="fullScreen"> Allows Open Full Screen</label>
+        <h3>Display mode</h3>
+        <label><input type="radio" name="colorTheme" id="darkTheme"> Normal</label>
+        <label><input type="radio" name="colorTheme" id="lightTheme"> High Contrast</label>
+        <h3>Viewer options</h3>
+        <label><input type="checkbox" id="navigator"> Navigator thumbnail</label>
+        <label><input type="checkbox" id="toolbar"> Toolbar</label>
+        <label class="left30"><input type="checkbox" id="zmMagnification"> Magnification buttons (left side)</label>
+        <label class="left30"><input type="checkbox" id="zmViewSize"> View size (right side)</label>
+        <label><input type="checkbox" id="zmPointer"> Pointer (buttons in right corner of toolbar)</label>
+        <label class="left30"><input type="radio" name="pointersize" id="pointerSmaller"> Small</label>
+        <label class="left30"><input type="radio" name="pointersize" id="pointerNormal"> Medium (default)</label>
+        <label class="left30"><input type="radio" name="pointersize" id="pointerLarger"> Large</label>
+        <label for="pointerColor" class="selectlabel">Color</label>
+        <select id="pointerColor" class="left30"></select>
+        <label><input type="checkbox" id="coordinates" class="left30"> Pointer Coordinates</label>
+        <label><input type="checkbox" id="waypoints"> Waypoints</label>
+        <label class="left30"><input type="radio" name="tagsize" id="tagSmaller"> Small</label>
+        <label class="left30"><input type="radio" name="tagsize" id="tagNormal"> Medium (default)</label>
+        <label class="left30"><input type="radio" name="tagsize" id="tagLarger"> Large</label>
+        <label for="tagColor" class="selectlabel">Default color</label>
+        <select id="tagColor" class="left30"></select>
+        <br>
+        <label class="left30">Move between waypoints:</label>
+        <label class="left30"><input type="checkbox" id="tagKeys"> Tab / backspace keys</label>
+        <label class="left30"><input type="checkbox" id="tagEdgeButtons"> Previous / next buttons (left / right edges)</label>
+        <label><input type="checkbox" id="scalebar"> Scalebar</label>
+        <label for="scalebarColor" class="selectlabel">Text &amp; line color</label>
+        <select id="scalebarColor" class="left30"></select>
+        <br>
+        <label for="scalebarBkgndColor" class="selectlabel">Background color</label>
+        <select id="scalebarBkgndColor" class="left30"></select>
+        <br>
+        <label><input type="checkbox" id="viewmanager"> List of views</label>
+        <h3>Description</h3>
+        <div class="pagemode">
+            <label><input type="radio" name="pagemode" id="multiPage"> View as Multiple Pages (default)</label>
+            <label><input type="radio" name="pagemode" id="onePage"> View as Single Page</label>
+        </div>
+        <h3>Font size</h3>
+        <div class="fontsize">
+            <label><input type="radio" name="fontsize" id="fontSmaller"> Small</label>
+            <label><input type="radio" name="fontsize" id="fontNormal"> Medium (default)</label>
+            <label><input type="radio" name="fontsize" id="fontLarger"> Large</label>
+        </div>
+        <p>Copyright &copy; 2005-2025
+            <br>All rights reserved.</p>
+    </div>
+    <div id="contactPanel" class="tcb-rightPanel" hidden>
+        <div class="tcb-rightPanelClose">
+            <button><span class="icon icon-cross2"></span>Close</button>
+        </div>
+        <h2><span class="tcb-rightPanelIcon icon-users"></span>CONTACT US</h2>
+        <p>Questions or comments should be sent to
+            <br><strong><a href="mailto:tcbrelje@gmail.com">tcbrelje@gmail.com</a></strong></p>
+        <p>This web site is owned and operated by:</p>
+        <h3>T. Clark Brelje, Ph.D.</h3>
+        <p>Faculty/Retired
+            <br>University of Minnesota
+            <br> Department of Genetics, Cell Biology and Development
+            <br> 6-160 Jackson Hall
+            <br> 321 Church St SE
+            <br> Minneapolis, MN 55455</p>
+        <h3>Robert L. Sorenson, Ph.D.</h3>
+        <p>Professor Emeritus
+            <br>University of Minnesota
+            <br> Department of Genetics, Cell Biology and Development
+            <br> 6-160 Jackson Hall
+            <br> 321 Church St SE
+            <br> Minneapolis, MN 55455</p>
+        <p>See <a href="../about-us/license.html">Terms of Use</a> for more information.</p>
+        <p>Copyright &copy; 2005-2025
+            <br>All rights reserved.</p>
+    </div>
+    <div id="helpPanel" class="tcb-rightPanel" hidden>
+        <div class="tcb-rightPanelClose">
+            <button><span class="icon icon-cross2"></span>Close</button>
+        </div>
+        <h2><span class="tcb-rightPanelIcon icon-question-mark"></span>HELP</h2>
+        <p>See <strong><a href="../helpview/help-001-slides/help.html">HELP</a></strong> for more information.</p>
+        <p>Each slide is shown with additional information to its right. The image can be changed using any combination of the following commands.</p>
+        <h3>Sidebar</h3>
+        <ul>
+            <li>Click on <strong>links</strong> to move to a specific region.</li>
+            <li>Click on <strong>images</strong> to show that view.</li>
+            <li>Use the <strong>toolbar</strong> to change the magnification and pan the displayed image.</li>
+        </ul>
+        <h3>Mouse</h3>
+        <ul>
+            <li>Click to <strong>zoom-in</strong></li>
+            <li>Double-click to <strong>zoom-out</strong></li>
+            <li>Alt-click to <strong>zoom-out</strong></li>
+            <li>Alt-double-click to <strong>zoom-out</strong> to the entire slide</li>
+            <li>Drag the image to <strong>pan</strong></li>
+        </ul>
+        <h3>Keyboard</h3>
+        <ul>
+            <li>Shift or &#8216;A&#8217; key to <strong>zoom-in</strong></li>
+            <li>Ctrl or &#8216;Z&#8217; Key to <strong>zoom-out</strong></li>
+            <li>Arrow Keys to <strong>pan</strong> across the image</li>
+            <li>ESC key to <strong>zoom-out</strong> to the entire slide</li>
+        </ul>
+        <h3>Touch</h3>
+        <ul>
+            <li>Tap to <strong>zoom-in</strong></li>
+            <li>Double-tap to <strong>zoom-out</strong></li>
+            <li>Alt-tap to <strong>zoom-out</strong> to the entire slide</li>
+            <li>Drag the image to <strong>pan</strong></li>
+        </ul>
+    </div>
+    <div id="sharePanel" class="tcb-rightPanel" hidden>
+        <div class="tcb-rightPanelClose">
+            <button><span class="icon icon-cross2"></span>Close</button>
+        </div>
+        <h2><span class="tcb-rightPanelIcon icon-share-alt"></span>SHARE</h2>
+        <div id="share-buttons"></div>
+        <p>A link to a virtual slide can be saved for later viewing in different ways.</p>
+        <h3>Clipboard</h3>
+        <p>The address of this view has been copied to your clipboard. This link can be pasted in any other program.</p>
+        <h3>Bookmark</h3>
+        <p>A bookmark link can be created using the bookmark function (<strong>Ctrl-D</strong> for Windows or <strong>Cmd-D</strong> for Mac) of your browser. Choose a name for the bookmark and select the folder in which you want it saved.</p>
+
+    </div>
+    <div id="zoomify-gallery-viewer"></div>
+    <div id="gallery">
+        <h2>Bone Marrow</h2>
+        <input id="slide-0" type="image" class="thumbnail" src="../slideview/MHS-304-bone-marrow/imgs/slide.png"
+            title="Bone Marrow<br>H&amp;E"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(0, true);">
+        <p id="title-0">MHS 304 Bone Marrow</p>
+        <h2>Bone Marrow Smear</h2>
+        <input id="slide-1" type="image" class="thumbnail" src="../slideview/MH-034a-bone-marrow-smear/imgs/slide.png"
+            title="Bone Marrow Smear<br>Wright's Stain"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(1, true);">
+        <p id="title-1">MH 034a Bone Marrow Smear</p>
+        <h2>Red Blood Cell Development</h2>
+        <input id="slide-2" type="image" class="thumbnail" src="../slideview/MH-034bhr-bone-marrow-smear/imgs/slide.png"
+            title="Red Blood Cell Development<br>Bone Marrow Smear<br>Wright's Stain"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(2, true);">
+        <p id="title-2">MH 034bhr Bone Marrow Smear</p>
+        <h2>Neutrophil Development</h2>
+        <input id="slide-3" type="image" class="thumbnail" src="../slideview/MH-034bhr-bone-marrow-smear/imgs/slide.png"
+            title="Neutrophil Development<br>Bone Marrow Smear<br>Wright's Stain"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(3, true);">
+        <p id="title-3">MH 034bhr Bone Marrow Smear</p>
+        <h2>Eosinophil Development</h2>
+        <input id="slide-4" type="image" class="thumbnail" src="../slideview/MH-034bhr-bone-marrow-smear/imgs/slide.png"
+            title="Eosinophil Development<br>Bone Marrow Smear<br>Wright's Stain"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(4, true);">
+        <p id="title-4">MH 034bhr Bone Marrow Smear</p>
+        <h2>Basophil Development</h2>
+        <input id="slide-5" type="image" class="thumbnail" src="../slideview/MH-034bhr-bone-marrow-smear/imgs/slide.png"
+            title="Basophil Development<br>Bone Marrow Smear<br>Wright's Stain"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(5, true);">
+        <p id="title-5">MH 034bhr Bone Marrow Smear</p>
+        <h2>Lymphocytes</h2>
+        <input id="slide-6" type="image" class="thumbnail" src="../slideview/MH-034bhr-bone-marrow-smear/imgs/slide.png"
+            title="Lymphocytes<br>Bone Marrow Smear<br>Wright's Stain"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(6, true);">
+        <p id="title-6">MH 034bhr Bone Marrow Smear</p>
+        <h2>Monocytes</h2>
+        <input id="slide-7" type="image" class="thumbnail" src="../slideview/MH-034bhr-bone-marrow-smear/imgs/slide.png"
+            title="Monocytes<br>Bone Marrow Smear<br>Wright's Stain"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(7, true);">
+        <p id="title-7">MH 034bhr Bone Marrow Smear</p>
+        <h2>Platelets</h2>
+        <input id="slide-8" type="image" class="thumbnail" src="../slideview/MH-034a-bone-marrow-smear/imgs/slide.png"
+            title="Megakaryocytes<br>Bone Marrow Smear<br>Wright's Stain"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(8, true);">
+        <p id="title-8">MH 034a Bone Marrow Smear</p>
+        <input id="slide-9" type="image" class="thumbnail" src="../slideview/MH-034bhr-bone-marrow-smear/imgs/slide.png"
+            title="Platelets<br>Bone Marrow Smear<br>Wright's Stain"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(9, true);">
+        <p id="title-9">MH 034bhr Bone Marrow Smear</p>
+        <h2>Review</h2>
+        <input id="slide-10" type="image" class="thumbnail" src="../slideview/MH-034bhr-summary/imgs/slide.png"
+            title="Review<br>Bone Marrow Smear<br>Wright's Stain"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(10, true);">
+        <p id="title-10">MH 034bhr Summary</p>
+        <h2>Plasma Cell</h2>
+        <input id="slide-11" type="image" class="thumbnail" src="../slideview/MH-034bhr-bone-marrow-smear/imgs/slide.png"
+            title="Plasma Cell<br>Bone Marrow Smear<br>Wright's Stain"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(11, true);">
+        <p id="title-11">MH 034bhr Bone Marrow Smear</p>
+        <h2>Osteoclast</h2>
+        <input id="slide-12" type="image" class="thumbnail" src="../slideview/MH-034f-bone-marrow-smear/imgs/slide.png"
+            title="Osteoclast<br>Bone Marrow Smear<br>Wright's Stain"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(12, true);">
+        <p id="title-12">MH 034bhr Bone Marrow Smear</p>
+        <h2>Other Examples</h2>
+        <input id="slide-13" type="image" class="thumbnail" src="../slideview/MH-034ahr-bone-marrow-smear/imgs/slide.png"
+            title="Bone Marrow Smear<br>Wright's Stain"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(13, true);">
+        <p id="title-13">MH 034ahr Bone Marrow Smear</p>
+        <input id="slide-14" type="image" class="thumbnail" src="../slideview/MH-034chr-bone-marrow-smear/imgs/slide.png"
+            title="Bone Marrow Smear<br>Wright's Stain"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(14, true);">
+        <p id="title-14">MH 034ahr Bone Marrow Smear</p>
+        <input id="slide-15" type="image" class="thumbnail" src="../slideview/MH-034dhr-bone-marrow-smear/imgs/slide.png"
+            title="Bone Marrow Smear<br>Wright's Stain"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(15, true);">
+        <p id="title-15">MH 034ahr Bone Marrow Smear</p>
+        <input id="slide-16" type="image" class="thumbnail" src="../slideview/MH-034ehr-bone-marrow-smear/imgs/slide.png"
+            title="Bone Marrow Smear<br>Wright's Stain"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(16, true);">
+        <p id="title-16">MH 034ahr Bone Marrow Smear</p>
+        <input id="slide-17" type="image" class="thumbnail" src="../slideview/MH-034fhr-bone-marrow-smear/imgs/slide.png"
+            title="Bone Marrow Smear<br>Wright's Stain"
+            width="120" height="60" alt="slide"
+            onclick="svSetGalleryImage(17, true);">
+        <p id="title-17">MH 034ahr Bone Marrow Smear</p>
+    </div>
+</body>
+
+
+<!-- Mirrored from histologyguide.com/gallery/08-hematopoiesis.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 May 2026 15:38:50 GMT -->
+</html> 

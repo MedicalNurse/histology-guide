@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+bookstores.umn.edu	TRUE	/	FALSE	1999999999	__cf_bm	EwM3ulGXnviwi5FfAKki4P4D.ZHCkXxX1ypgFFNyOt0-1779715675.3803296-1.0.1.1-zFDQ8JKowWd8aPg08t61WJf8qiUfSqStkKyvPgaxiNVHjOh4hw6dkcewyHcsA.0sA49ae83GyKRRGjYW9wedLFOKGygQ8turZNNntcZ.VL3EyxCEM83Iu2VtFXlxamU0
+bookstores.umn.edu	TRUE	/	FALSE	1999999999	SameSite	None
+
